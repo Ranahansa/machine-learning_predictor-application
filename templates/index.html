@@ -10,7 +10,7 @@
     <div class="wrapper">
         <div>
             <h1>Laptop Price Predictor</h1>
-            <form action="/">
+            <form action="/" method="POST">
                 <div class="inputfield">
                     <label for="ram">RAM (in GB):</label>
                     <input class="input" type="text" name="ram" required>
@@ -100,6 +100,13 @@
                     <input type="submit" class="btn" value="Predict Price">
             </div>
             </form>
+            <div>
+                <p class="result">
+                    {% if pred %}
+                        The predicted price of the laptop is LKR :{{ pred }}.
+                    {% endif %}
+                </p>
+            </div>
         </div>
     </div>
 </body>
